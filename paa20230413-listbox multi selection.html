@@ -1,0 +1,46 @@
+<!-- example for list box with multi selection
+
+Roll No: 11; Date: 20230413 -->
+
+<select
+id = "Lstbx"
+
+size="4"
+multiple="multiple"
+oninput="Lstbx_oninput ();" >
+
+<option value = 'coffee'> Coffee </option>
+<option value = 'Tea'> Tea </option>
+<option value = 'Milk'> Milk </option>
+
+<option value = '7Up'> 7Up </option>
+<option value = 'Coke'> Coke </option>
+<option value = 'Pepsi'> Pepsi </option>
+
+<option value = 'Orangan Juice'> Orange Juice </option>
+<option value = 'Mango Juice'> Mango Juice </option>
+<option value = 'Apple Juice'> Apple Juice </option>
+
+</select>
+
+<br>
+<br>
+<div id = "divop">
+Wait . . . 
+</div>
+
+<script>
+function Lstbx_oninput() {
+var res = '';
+var i=0;
+for (var i = 0; i < Lstbx.length; i ++) {
+
+if (Lstbx.options[i].selected {
+res += Lstbx.options[i].value + '<br>';
+
+}
+ divop.innerHTML = res; 
+}
+</script>
+
+ 

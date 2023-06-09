@@ -1,0 +1,53 @@
+<!-- Radio button result using div and document title 
+
+Roll No: 11; Date: 20230413
+-->
+
+
+<input
+type="radio"
+id='rdoHot'
+name='rdoDrinks'
+value='Hot'
+oninput="rdo_oninput ( );"
+/> Hot
+<br>
+<input
+type='radio'
+id='rdoCool'
+name='rdoDrinks'
+value='Cool'
+oninput="rdo_oninput ( );"
+/> Cool
+
+<br>
+<input
+type='radio'
+id='rdoSoft'
+name='rdoDrinks'
+value='Soft'
+oninput="rdo_oninput ( ) ;"
+/> Soft
+
+<div id ="divop">
+Wait..
+</div>
+
+<script>
+ function rdo_oninput ( ) {
+ if (rdoHot.checked) {
+ 
+ document.title=rdoHot.value;
+ divop.innerHTML=rdoHot.value;
+}
+ 
+ if (rdoCool.checked) {
+ document.title=rdoCool.value;
+ divop.innerHTML=rdoCool.value;
+ }
+ if (rdoSoft.checked) { 
+ document.title=rdoSoft.value;
+ divop.innerHTML=rdoSoft.value;
+ }
+ }
+ </script>

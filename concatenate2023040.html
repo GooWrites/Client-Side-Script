@@ -1,0 +1,72 @@
+<!-- entering number using concatenate 
+Roll No: 11
+Date: 20230405
+--> 
+
+<tableborder="1">
+
+<table>
+<tr>
+<td>
+First Number
+<td>
+<input
+type="text"
+id="textboxfno"
+placeholder="Enter Here"
+/>
+<br> 
+</br>
+<tr>
+<td>
+Second Number
+<td>
+<input
+type="text"
+id="textboxsno"
+placeholder="Enter Here"
+/>
+<br> 
+</br>
+<tr>
+<td>
+
+Results
+<td>
+<input
+type="text"
+id="tbxres"
+placeholder="Answer"
+readonly="readonly"
+/>
+<br> 
+</br>
+<tr>
+<td>
+<input
+type="button"
+value="Cancel"
+onclick="location.href='concatenate20230405.html';"
+/>
+<td>
+<input
+type="button"
+value="Find"
+onclick="btnFind_onclick();"
+/>
+</table>
+
+<script>
+	function btnFind_onclick(){
+	tbxres.value = (textboxfno.value) + (textboxsno.value);
+} 
+</script>
+
+
+
+
+
+
+
+
+

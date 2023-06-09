@@ -1,0 +1,39 @@
+</--
+Example for Multification Table
+
+Roll No: 11
+Date: 20230407
+-->
+
+<title> Enter Mutliplication Number </title>
+Enter Mutliplication Number	:
+<input 
+type= "number" 
+id="nummno" 
+placeholder="0000" 
+oninput="nummno_oninput ( );" >
+
+<input
+type="button"
+value="Refresh"
+onclick="location.href='paa20230407_3.html.';" // button placed for refresh the box	
+/>
+<div id= "dvop">
+Loading...
+</div>
+
+<script>
+
+function nummno_oninput( ) {
+var mno = nummno.value; 
+mno= parseInt(mno);
+mno= isNaN(mno) ? 0 : mno;
+var i=0;
+var res= "" ;  // empty string
+for (i=1;  i < 31; i++) {
+res +=i+ 'x' + mno + '=' + (i*mno); // 1x2=2
+res += '<br>' ;
+}
+dvop.innerHTML = res;
+}
+</script>

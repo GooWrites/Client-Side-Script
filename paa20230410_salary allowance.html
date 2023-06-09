@@ -1,0 +1,128 @@
+<!--
+Roll No: 11
+Date: 20230410
+-->
+
+<title>
+Empolyee Salary Tax
+</title>
+<table border="1">
+<tr>
+<td>
+ID
+<td>
+<input
+text="number"
+id="numid"
+placeholder="0"
+/>
+
+<tr>
+<td>
+Name
+<td>
+<input
+text="text"
+id="tbxename"
+placeholder="Unknown"
+/>
+
+<tr>
+<td>
+Salary
+<td>
+<input
+text="text"
+id="tbxsal"
+placeholder="0"
+oninput="tbxsal_oninput ();"
+/>
+<tr>
+<td>
+House Rent Allowance
+<td>
+<input
+type="text"
+id="tbxhra"
+placeholder="0"
+readonly="readonly"
+/>
+
+<tr>
+<td>
+Dearness Allowance
+<td>
+<input
+type="text"
+id="tbxda"
+placeholder="0.0"
+readonly="readonly"
+/>
+
+<tr>
+<td>
+Provident Fund
+<td>
+<input
+type="text"
+id="tbxpf"
+placeholder="0.0"
+readonly="readonly"
+/>
+
+<tr>
+<td>
+Gross Pay
+<td>
+<input
+type="text"
+id="tbxgpay"
+placeholder="0.0"
+readonly="readonly"
+/>
+
+<tr>
+<td>
+Net Pay
+<td>
+<input
+type="text"
+id="tbxnpay"
+placeholder="0.0"
+readonly="readonly"
+/>
+
+<tr align="center">
+<td colspan ="2">
+<input
+type="button"
+value="Cancel"
+onclick="location.href='paa20230410_4.html';"
+/>
+
+</table>
+
+<script>
+function tbxsal_oninput() {
+
+	var sal=tbxsal.value;
+	
+	sal=parseFloat(sal);
+	sal=isNaN(sal) ? 0 : sal;
+	
+	var hra=sal*20.0 /100;
+	var da=sal*15.0 /100;
+	var pf=sal*35.0 /100;
+	
+	var gpay=sal+hra+da;
+	var npay=gpay - pf;
+	
+	tbxhra.value=hra;
+	tbxda.value=da;
+	tbxpf.value=pf;
+	tbxgpay.value=gpay;
+	tbxnpay.value=npay;
+}
+</script>
+
+

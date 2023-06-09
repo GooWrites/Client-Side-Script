@@ -1,0 +1,122 @@
+<body bgcolor="#00b36b" text="black" style="font-size: 300%;" style="font-size:300%">
+
+Simple Calculator
+
+
+<!-- 
+'Calc' Stands for 'Calculator'
+Roll No: 11
+Date: 20230407
+-->
+
+<br>
+<br>
+
+<table border="1">
+
+<tr>
+<td>
+First Number
+<td>
+<input
+type="text"
+id="tbxfno"
+placeholder="0"
+/>
+
+<tr>
+<td>
+Second Number
+<td>
+<input
+type="text"
+id="tbxsno"
+placeholder="0"
+/>
+
+<tr>
+<td>
+Results
+<td>
+<input
+type="text"
+id="tbxres"
+placeholder="0"
+readonly="readonly"
+/>
+
+<tr align ="center"/>
+<td colspan ="2">
+<input
+type="button"
+value="Cancel"
+onclick="location.href='paa20230407_1.html';"
+/>
+<input
+type="button"
+value="+"
+onclick="btn_onclick ('+');"
+/>
+<input
+type="button"
+value="-"
+onclick="btn_onclick ('-');"
+/>
+<input
+type="button"
+value="*"
+onclick="btn_onclick ('*');"
+/>
+<input
+type="button"
+value="/"
+onclick="btn_onclick ('/');"
+/>
+<input
+type="button"
+value="%"
+onclick="btn_onclick ('%');"
+/>
+<table>
+
+<script>
+function btn_onclick (fpOperater){
+
+var fno=tbxfno.value;
+fno=parseFloat(fno);
+fno=isNaN(fno) ? 0: fno;
+
+var sno=tbxsno.value;
+sno=parseFloat(sno);
+sno=isNaN(sno) ? 0: sno;
+
+var res=0; //'Switch' is one of the conitional statement
+switch (fpOperater) {  //'case' unit develop TURE part
+ 
+ case '+':
+ res=fno+sno;
+ break;
+ 
+ case '-':
+ res=fno-sno;
+ break;
+ 
+ case '*':
+ res=fno*sno;
+ break;
+ 
+ case '/':
+ res=fno/sno;
+ break;
+ 
+ case '%':
+ res=fno%sno;
+ break;
+ }
+ tbxres.value=res;
+
+
+}
+</script>
+
+

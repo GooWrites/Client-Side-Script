@@ -1,0 +1,55 @@
+<!--
+example for  'checkbox' CUI components
+In HTML <br> tag makes new line
+In JS \n (not/n) makes new 
+alert tag given to indicate the result
+
+Roll No: 11
+Date: 20230410
+-->
+<title>
+ Checkbox  using CUI components </title>
+ Drinks Categories
+<br>
+<br>
+<input
+type ="checkbox"
+id="chkbxHot"
+value="Hot"
+oninput="chkbx_oninput( );"
+/>Hot
+
+<br>
+<br>
+<input
+type ="checkbox"
+id="chkbxCool"
+value= "Cool"
+oninput="chkbx_oninput( );"
+/>Cool
+
+<br>
+<br>
+<input
+type ="checkbox"
+id="chkbxSoft"
+value= "Soft"
+oninput="chkbx_oninput( );"
+/>Soft
+
+
+<script>
+function chkbx_oninput( ) {
+var res= ' ';
+if (chkbxHot.checked) {
+res+= 'Hot \n' ;
+}
+if (chkbxCool.checked) {
+res+= 'Cool \n' ;
+}
+if (chkbxSoft.checked) {
+res+= 'Soft';
+}
+alert(res);
+} 
+</script>

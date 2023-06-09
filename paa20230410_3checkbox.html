@@ -1,0 +1,58 @@
+<!--
+example for  'checkbox' GUI components
+<div> tag stands for 'division'
+
+Roll No: 11
+Date: 20230410
+-->
+<title>
+ Checkbox using div </title>
+ Drinks Categories
+<br>
+<br>
+<input
+type ="checkbox"
+id="chkbxHot"
+value="Hot"
+oninput="chkbx_oninput( );"
+/>Hot
+
+<br>
+<br>
+<input
+type ="checkbox"
+id="chkbxCool"
+value= "Cool"
+oninput="chkbx_oninput( );"
+/>Cool
+
+<br>
+<br>
+<input
+type ="checkbox"
+id="chkbxSoft"
+value= "Soft"
+oninput="chkbx_oninput( );"
+/>Soft
+
+<br>
+<br>
+<div id ='divop'>
+Loading...
+</div>
+
+<script>
+function chkbx_oninput( ) {
+var res= ' ';
+if (chkbxHot.checked) {
+res+= 'Hot <br>' ;
+}
+if (chkbxCool.checked) {
+res+= 'Cool <br>' ;
+}
+if (chkbxSoft.checked) {
+res+= 'Soft';
+}
+divop.innerHTML=res;
+} 
+</script>
